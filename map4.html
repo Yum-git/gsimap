@@ -68,11 +68,11 @@ const gsimap_init = function(map, layer) {
 
     layer.addIcon(35.943560, 136.188917, "鯖江駅", "icon/icon-purple.png", 32)
     layer.addIcon(35.942729, 136.198846, "めがね会館", "icon/icon-purple.png", 32)
-layer.addIcon(lat, lng, name, "icon/icon-green.png", 32, function(name){
-	if(name.indexOf("秋吉") >= 0) {
-		alert("あたり！")
-	}
-})
+	layer.addIcon(lat, lng, name, "icon/icon-green.png", 32, function(name){
+		if(name.indexOf("秋吉") >= 0) {
+			alert("あたり！")
+		}
+	})
 
     // SPARQLエンドポイント
     setSPARQLEndpoint("https://sparql.opendata.cc/data/sparql")
@@ -105,6 +105,7 @@ layer.addIcon(lat, lng, name, "icon/icon-green.png", 32, function(name){
 		}
     });
     
+	/*
     // 場所で絞り込むSPARQLクエリー
 	var query = `
         prefix ic: <http://imi.go.jp/ns/core/rdf#>
@@ -118,6 +119,7 @@ layer.addIcon(lat, lng, name, "icon/icon-green.png", 32, function(name){
         	)
         } limit 100
     `
+	*/
 
 }
 
