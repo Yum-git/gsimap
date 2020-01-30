@@ -80,8 +80,8 @@ const gsimap_init = function(map, layer) {
         	?uri ic:名称 [ ic:表記 ?name ].
         	?uri ic:地理座標 [ ic:緯度 ?lat; ic:経度 ?lng; ].
         	 filter(
-        		xsd:float(?lat) < 35.7 && xsd:float(?lng) > 139.7 &&
-        		xsd:float(?lat) > 35.6 && xsd:float(?lng) < 139.8
+        		xsd:float(?lat) < 36.0 && xsd:float(?lng) > 136.1 &&
+        		xsd:float(?lat) > 35.8 && xsd:float(?lng) < 136.3
         	)
         } limit 100
     `
